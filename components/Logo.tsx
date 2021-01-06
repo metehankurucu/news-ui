@@ -5,7 +5,7 @@ const Logo = (props: any) => {
     return (
         <Box {...props}>
             <Text fontSize="1.5rem" fontWeight="bold">
-                Logo
+                Modern News
             </Text>
         </Box>
     );

@@ -4,6 +4,7 @@ import MenuToggle from './MenuToggle';
 import Logo from '../Logo';
 import MenuItem from './MenuItem';
 import Link from 'next/link';
+import styles from '../../constants/styles';
 
 interface Props {}
 
@@ -20,13 +21,13 @@ const Navbar: React.FC<Props> = () => {
                 wrap="wrap"
                 w="100%"
                 p={8}
-                maxW={1400}
+                maxW={styles.mainMaxWidth}
                 mx={'auto'}
                 bg={['primary.500', 'primary.500', 'transparent', 'transparent']}
             >
                 <Button variant="ghost">
                     <Link href="/">
-                        <Logo w="100px" color={'primary'} />
+                        <Logo color={'primary'} />
                     </Link>
                 </Button>
                 <MenuToggle toggle={toggle} isOpen={isOpen} />
