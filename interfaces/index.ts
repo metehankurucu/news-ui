@@ -8,3 +8,13 @@ export type User = {
   id: number
   name: string
 }
+
+export type Post = {
+  id: number
+  slug: string
+  img: string
+  title: string
+  content: string
+  tags?: string
+  createdAt?: Date | string
+}
