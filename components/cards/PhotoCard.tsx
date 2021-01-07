@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Box, BoxProps, Heading, Image } from '@chakra-ui/react';
+import { Box, BoxProps, Heading } from '@chakra-ui/react';
+import styles from '../../constants/styles';
+import Image from '../Image';
 
 interface Props extends BoxProps {
     boxSize?: number | string;
@@ -16,7 +18,7 @@ const PhotoCard: React.FC<Props> = ({
     imgSrc,
     onClick,
     boxSize = '100%',
-    imgBorderRadius = 40,
+    imgBorderRadius = styles.borderRadius,
     ...rest
 }) => {
     const [hover, setHover] = useState(false);

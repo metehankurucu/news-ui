@@ -1,3 +1,4 @@
 export default {
-    mainMaxWidth: 1440,
+    mainMaxWidth: 1340,
+    borderRadius: 18,
 };
