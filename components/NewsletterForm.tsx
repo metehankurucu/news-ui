@@ -1,20 +1,20 @@
 import React from 'react';
-import { Box, Text, Input, Button, Link } from '@chakra-ui/react';
+import { Box, Text, Input, Button, Link, BoxProps } from '@chakra-ui/react';
 import styles from '../constants/styles';
 
-interface Props {
+interface Props extends BoxProps {
     onSubmit: (email: string) => void;
 }
 
-const NewsletterForm = (props: Props) => {
+const NewsletterForm = ({ onSubmit, ...props }: Props) => {
     return (
         <Box
             flex="1"
-            margin="1rem"
             padding="1.2rem"
             textAlign="center"
             backgroundColor="#fbfbfb"
             borderRadius={styles.borderRadius}
+            {...props}
         >
             <Text color="primary" fontWeight="bold" margin=".5rem">
                 Subscribe Our Newsletter

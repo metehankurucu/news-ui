@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { Box, BoxProps } from '@chakra-ui/react';
 import Navbar from './navbar';
 import styles from '../constants/styles';
+import Footer from './Footer';
 
 type Props = {
     title?: string;
@@ -22,10 +23,7 @@ const Layout: React.FC<Props> = ({ children, title = 'This is the default title'
             <Box as="main" minH={'80vh'} maxW={styles.mainMaxWidth} marginX="auto" {...props}>
                 {children}
             </Box>
-            <footer>
-                <hr />
-                <span>I'm here to stay (Footer)</span>
-            </footer>
+            <Footer />
         </Box>
     </Box>
 );

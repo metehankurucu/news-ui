@@ -9,10 +9,19 @@ interface Props {
     post4: Post;
     margin?: number;
     containerHeight?: number;
+    onClickPost: (post: Post) => void;
 }
 
 //TODO responsive flexDirection
-const PhotoCards: React.FC<Props> = ({ post1, post2, post3, post4, margin = 6, containerHeight = 800 }) => {
+const PhotoCards: React.FC<Props> = ({
+    onClickPost,
+    post1,
+    post2,
+    post3,
+    post4,
+    margin = 6,
+    containerHeight = 800,
+}) => {
     return (
         <Box flex={1} d="flex" maxH={`${containerHeight}px`}>
             <PhotoCard
@@ -21,7 +30,7 @@ const PhotoCards: React.FC<Props> = ({ post1, post2, post3, post4, margin = 6, c
                 maxHeight={`${containerHeight - 2 * margin}px`}
                 margin={`${margin}px`}
                 alt={`Picture of ${post1.title}`}
-                onClick={() => {}}
+                onClick={() => onClickPost(post1)}
             />
             <Box margin="0px" d="flex" flex={2} flexDirection="column">
                 <PhotoCard
@@ -30,7 +39,7 @@ const PhotoCards: React.FC<Props> = ({ post1, post2, post3, post4, margin = 6, c
                     alt={`Picture of ${post2.title}`}
                     maxHeight={`${containerHeight / 2 - 2 * margin}px`}
                     margin={`${margin}px`}
-                    onClick={() => {}}
+                    onClick={() => onClickPost(post2)}
                 />
                 <Box margin="0px" d="flex" flex={1} height={'100%'}>
                     <PhotoCard
@@ -39,7 +48,7 @@ const PhotoCards: React.FC<Props> = ({ post1, post2, post3, post4, margin = 6, c
                         imgSrc={post3.img}
                         alt={`Picture of ${post3.title}`}
                         margin={`${margin}px`}
-                        onClick={() => {}}
+                        onClick={() => onClickPost(post3)}
                     />
                     <PhotoCard
                         maxHeight={`${containerHeight / 2 - 2 * margin}px`}
@@ -47,7 +56,7 @@ const PhotoCards: React.FC<Props> = ({ post1, post2, post3, post4, margin = 6, c
                         imgSrc={post4.img}
                         alt={`Picture of ${post4.title}`}
                         margin={`${margin}px`}
-                        onClick={() => {}}
+                        onClick={() => onClickPost(post4)}
                     />
                 </Box>
             </Box>

@@ -13,9 +13,21 @@ interface Props extends BoxProps {
     imgBoxSize?: string | number;
     date?: string | Date;
     skeleton?: boolean;
+    titleFontSize?: number | string;
 }
 
-const PostCard = ({ height, title, content, imgSrc, imgBoxSize, imgAlt, date, skeleton = false, ...props }: Props) => {
+const PostCard = ({
+    height,
+    title,
+    content,
+    imgSrc,
+    imgBoxSize,
+    imgAlt,
+    date,
+    skeleton = false,
+    titleFontSize = '1.4rem',
+    ...props
+}: Props) => {
     const [hover, setHover] = useState(false);
 
     return (
@@ -44,12 +56,15 @@ const PostCard = ({ height, title, content, imgSrc, imgBoxSize, imgAlt, date, sk
             </Box>
             <Box d="flex" flexDirection="column" flex="6" padding={'1rem'} justifyContent="flex-start">
                 <Skeleton marginY={'.2rem'} borderRadius={styles} isLoaded={!skeleton}>
-                    <Heading color={'#000'} fontSize="1.4rem" fontWeight="500">
+                    <Heading color={'#000'} fontSize={titleFontSize} fontWeight="500">
                         {_.upperFirst(title)}
                     </Heading>
                 </Skeleton>
                 <Skeleton marginY={'.2rem'} isLoaded={!skeleton}>
-                    <Text fontSize="1rem">{content.substr(0, 120)}...</Text>
+                    <Text fontSize="1rem">
+                        {content.substr(0, 120)}
+                        {content.length > 120 ? '...' : ''}
+                    </Text>
                 </Skeleton>
                 <Skeleton marginY={'.2rem'} isLoaded={!skeleton}>
                     <Text fontSize=".7rem" color="gray.500" fontWeight="bold">
