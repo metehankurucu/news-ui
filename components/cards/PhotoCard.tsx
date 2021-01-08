@@ -36,7 +36,14 @@ const PhotoCard: React.FC<Props> = ({
             onMouseLeave={() => setHover(false)}
             {...rest}
         >
-            <Image objectFit="cover" borderRadius={imgBorderRadius} boxSize={boxSize} src={imgSrc} alt={alt} />
+            <Image
+                objectFit="cover"
+                borderRadius={imgBorderRadius}
+                boxSize={boxSize}
+                src={imgSrc}
+                alt={alt}
+                maxHeight={rest.maxHeight}
+            />
             <Heading
                 fontSize="1.1rem"
                 transition="ease-in 0.15s"
