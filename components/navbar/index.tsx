@@ -20,7 +20,9 @@ const Navbar: React.FC<Props> = () => {
                 justify="space-between"
                 wrap="wrap"
                 w="100%"
-                p={8}
+                py={8}
+                pl={2}
+                pr={{ base: 4, md: 6 }}
                 maxW={styles.mainMaxWidth}
                 mx={'auto'}
                 bg={['primary.500', 'primary.500', 'transparent', 'transparent']}
@@ -40,9 +42,9 @@ const Navbar: React.FC<Props> = () => {
                         pt={[4, 4, 0, 0]}
                     >
                         <MenuItem to="/">Home</MenuItem>
-                        <MenuItem to="#">Magazine</MenuItem>
-                        <MenuItem to="#">Sports</MenuItem>
-                        <MenuItem to="#">Economy</MenuItem>
+                        <MenuItem to="/">Magazine</MenuItem>
+                        <MenuItem to="/">Sports</MenuItem>
+                        <MenuItem to="/">Economy</MenuItem>
                     </Stack>
                 </Box>
             </Flex>

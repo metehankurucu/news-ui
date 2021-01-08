@@ -1,29 +1,23 @@
 import React, { useState } from 'react';
-import { Box, BoxProps, Heading, Text, Skeleton } from '@chakra-ui/react';
+import { Box, BoxProps, Text } from '@chakra-ui/react';
 import styles from '../../constants/styles';
+import { Post } from '../../interfaces';
 import Image from '../Image';
+import Card from './Card';
 import _ from 'lodash';
-
 interface Props extends BoxProps {
-    height: number | string;
-    title: string;
-    content: string;
-    imgSrc: string;
-    imgAlt: string;
-    imgBoxSize?: string | number;
-    date?: string | Date;
+    post: Post;
+    column?: boolean;
+    height?: number | string;
     skeleton?: boolean;
+    imgBoxSize?: string | number;
     titleFontSize?: number | string;
 }
 
 const PostCard = ({
-    height,
-    title,
-    content,
-    imgSrc,
+    post,
+    column = false,
     imgBoxSize,
-    imgAlt,
-    date,
     skeleton = false,
     titleFontSize = '1.4rem',
     ...props
@@ -31,48 +25,94 @@ const PostCard = ({
     const [hover, setHover] = useState(false);
 
     return (
-        <Box
-            d="flex"
-            bgColor="#fff"
-            justifyContent="flex-start"
-            flexDirection="row"
+        <Card
             marginY=".5rem"
-            padding={'1rem'}
-            borderWidth="0.1px"
+            p={4}
+            display={{ md: 'flex' }}
+            justifyContent="flex-start"
+            flexDirection={{ base: 'column', md: column ? 'column' : 'row' }}
             borderColor="#f0f0f0"
-            borderRadius={styles.borderRadius}
             cursor="pointer"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             style={{ transform: `scale(${hover ? 1.01 : 1})` }}
             transition="ease-in 0.2s"
-            boxShadow="sm"
-            _hover={{ bgColor: '#fafafa' }}
-            height={height}
+            overflow="hidden"
             {...props}
         >
-            <Box d="flex" flex="3">
-                <Image src={imgSrc} alt={imgAlt} objectFit="cover" borderRadius={styles.borderRadius} />
+            <Box>
+                <Image
+                    width={{ base: '100%', lg: column ? '100%' : 60 }}
+                    height={{ base: 80, lg: column ? '15rem' : 40 }}
+                    src={post.img}
+                    alt={'Photo of ' + post.title}
+                    objectFit="cover"
+                    borderRadius={styles.borderRadius}
+                />
             </Box>
-            <Box d="flex" flexDirection="column" flex="6" padding={'1rem'} justifyContent="flex-start">
-                <Skeleton marginY={'.2rem'} borderRadius={styles} isLoaded={!skeleton}>
-                    <Heading color={'#000'} fontSize={titleFontSize} fontWeight="500">
-                        {_.upperFirst(title)}
-                    </Heading>
-                </Skeleton>
-                <Skeleton marginY={'.2rem'} isLoaded={!skeleton}>
-                    <Text fontSize="1rem">
-                        {content.substr(0, 120)}
-                        {content.length > 120 ? '...' : ''}
-                    </Text>
-                </Skeleton>
-                <Skeleton marginY={'.2rem'} isLoaded={!skeleton}>
-                    <Text fontSize=".7rem" color="gray.500" fontWeight="bold">
-                        {date}
-                    </Text>
-                </Skeleton>
+            <Box mt={{ base: 4, md: 2 }} ml={{ md: 6 }}>
+                <Text fontWeight="bold" textTransform="uppercase" fontSize="sm" letterSpacing="wide" color="teal.600">
+                    {post.category}
+                </Text>
+                <Text
+                    mt={1}
+                    display="block"
+                    fontSize="lg"
+                    lineHeight="normal"
+                    fontWeight="semibold"
+                    href="#"
+                    color="default"
+                >
+                    {_.upperFirst(post.title)}
+                </Text>
+                <Text mt={2} color="gray.500">
+                    {post.content.substr(0, 120)}
+                    {post.content.length > 120 ? '...' : ''}
+                </Text>
             </Box>
-        </Box>
+        </Card>
+        // <Card
+        //     d="flex"
+        //     justifyContent="flex-start"
+        //     flexDirection={{ base: 'column', md: 'row' }}
+        //     marginY=".5rem"
+        //     borderColor="#f0f0f0"
+        //     cursor="pointer"
+        //     onMouseEnter={() => setHover(true)}
+        //     onMouseLeave={() => setHover(false)}
+        //     style={{ transform: `scale(${hover ? 1.01 : 1})` }}
+        //     transition="ease-in 0.2s"
+        //     overflow="hidden"
+        //     {...props}
+        // >
+        //     <Box flexShrink={0} d="flex" flex={{ base: '1', md: '3' }}>
+        //         <Image src={imgSrc} alt={imgAlt} objectFit="cover" borderRadius={styles.borderRadius} />
+        //     </Box>
+        //     <Box
+        //         d="flex"
+        //         flexDirection="column"
+        //         flex={{ base: '2', md: '6' }}
+        //         padding={'.5rem'}
+        //         justifyContent="flex-start"
+        //     >
+        //         <Skeleton marginY={'.2rem'} borderRadius={styles} isLoaded={!skeleton}>
+        //             <Heading lineHeight="normal" fontWeight="semibold" color={'#000'} fontSize={titleFontSize}>
+        //                 {_.upperFirst(title)}
+        //             </Heading>
+        //         </Skeleton>
+        //         <Skeleton marginY={'.2rem'} isLoaded={!skeleton}>
+        //             <Text fontSize="1rem">
+        //                 {content.substr(0, 120)}
+        //                 {content.length > 120 ? '...' : ''}
+        //             </Text>
+        //         </Skeleton>
+        //         <Skeleton marginY={'.2rem'} isLoaded={!skeleton}>
+        //             <Text fontSize=".7rem" color="gray.500" fontWeight="bold">
+        //                 {date}
+        //             </Text>
+        //         </Skeleton>
+        //     </Box>
+        // </Card>
     );
 };
 

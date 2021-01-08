@@ -1,17 +1,30 @@
 // import App from "next/app";
 import type { AppProps /*, AppContext */ } from 'next/app';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import '../styles/index.css';
+import { Fonts } from '../fonts';
 
 const theme = extendTheme({
     colors: {
-        primary: '#7BC6E9',
+        primary: '#2C7A7B',
         default: '#494949',
+        youtube: {
+            500: '#FF0000',
+        },
+        instagram: {
+            500: '#E1306C',
+        },
+    },
+    fonts: {
+        heading: 'Inter',
+        body: 'Inter',
     },
 });
 
 function Application({ Component, pageProps }: AppProps) {
     return (
         <ChakraProvider theme={theme}>
+            <Fonts />
             <Component {...pageProps} />
         </ChakraProvider>
     );

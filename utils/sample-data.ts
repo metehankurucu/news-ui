@@ -10,6 +10,7 @@ export const posts: Post[] = [
         createdAt: '12/02/2021',
         slug: '1',
         tags: 'Basic Industries',
+        category: 'Basic Industries',
     },
     {
         id: 2,
@@ -20,6 +21,7 @@ export const posts: Post[] = [
         createdAt: '15/06/2020',
         slug: '2',
         tags: 'Energy',
+        category: 'Energy',
     },
     {
         id: 3,
@@ -30,6 +32,7 @@ export const posts: Post[] = [
         createdAt: '02/12/2019',
         slug: '3',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 4,
@@ -40,6 +43,7 @@ export const posts: Post[] = [
         createdAt: '27/09/2020',
         slug: '4',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 5,
@@ -50,6 +54,7 @@ export const posts: Post[] = [
         createdAt: '19/11/2019',
         slug: '5',
         tags: 'Capital Goods',
+        category: 'Capital Goods',
     },
     {
         id: 6,
@@ -60,6 +65,7 @@ export const posts: Post[] = [
         createdAt: '11/08/2020',
         slug: '6',
         tags: 'Basic Industries',
+        category: 'Basic Industries',
     },
     {
         id: 7,
@@ -70,6 +76,7 @@ export const posts: Post[] = [
         createdAt: '11/03/2021',
         slug: '7',
         tags: 'Consumer Durables',
+        category: 'Consumer Durables',
     },
     {
         id: 8,
@@ -80,6 +87,7 @@ export const posts: Post[] = [
         createdAt: '24/07/2020',
         slug: '8',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 9,
@@ -90,6 +98,7 @@ export const posts: Post[] = [
         createdAt: '22/06/2020',
         slug: '9',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 10,
@@ -100,6 +109,7 @@ export const posts: Post[] = [
         createdAt: '13/04/2021',
         slug: '10',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 11,
@@ -110,6 +120,7 @@ export const posts: Post[] = [
         createdAt: '15/11/2020',
         slug: '11',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 12,
@@ -120,6 +131,7 @@ export const posts: Post[] = [
         createdAt: '29/11/2021',
         slug: '12',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 13,
@@ -130,6 +142,7 @@ export const posts: Post[] = [
         createdAt: '27/12/2020',
         slug: '13',
         tags: 'Basic Industries',
+        category: 'Basic Industries',
     },
     {
         id: 14,
@@ -140,6 +153,7 @@ export const posts: Post[] = [
         createdAt: '01/11/2020',
         slug: '14',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 15,
@@ -150,6 +164,7 @@ export const posts: Post[] = [
         createdAt: '17/11/2020',
         slug: '15',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 16,
@@ -160,6 +175,7 @@ export const posts: Post[] = [
         createdAt: '26/10/2020',
         slug: '16',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 17,
@@ -170,6 +186,7 @@ export const posts: Post[] = [
         createdAt: '30/05/2021',
         slug: '17',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 18,
@@ -180,6 +197,7 @@ export const posts: Post[] = [
         createdAt: '19/07/2020',
         slug: '18',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 19,
@@ -190,6 +208,7 @@ export const posts: Post[] = [
         createdAt: '22/11/2021',
         slug: '19',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 20,
@@ -200,6 +219,7 @@ export const posts: Post[] = [
         createdAt: '21/07/2020',
         slug: '20',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 21,
@@ -210,6 +230,7 @@ export const posts: Post[] = [
         createdAt: '10/10/2019',
         slug: '21',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 22,
@@ -220,6 +241,7 @@ export const posts: Post[] = [
         createdAt: '10/12/2019',
         slug: '22',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 23,
@@ -230,6 +252,7 @@ export const posts: Post[] = [
         createdAt: '27/02/2020',
         slug: '23',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 24,
@@ -240,6 +263,7 @@ export const posts: Post[] = [
         createdAt: '14/10/2021',
         slug: '24',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 25,
@@ -250,6 +274,7 @@ export const posts: Post[] = [
         createdAt: '06/07/2020',
         slug: '25',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 26,
@@ -260,6 +285,7 @@ export const posts: Post[] = [
         createdAt: '24/09/2020',
         slug: '26',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 27,
@@ -270,6 +296,7 @@ export const posts: Post[] = [
         createdAt: '28/01/2020',
         slug: '27',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 28,
@@ -280,6 +307,7 @@ export const posts: Post[] = [
         createdAt: '05/11/2019',
         slug: '28',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 29,
@@ -290,6 +318,7 @@ export const posts: Post[] = [
         createdAt: '10/05/2020',
         slug: '29',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 30,
@@ -300,6 +329,7 @@ export const posts: Post[] = [
         createdAt: '15/04/2021',
         slug: '30',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 31,
@@ -310,6 +340,7 @@ export const posts: Post[] = [
         createdAt: '03/04/2020',
         slug: '31',
         tags: 'Energy',
+        category: 'Energy',
     },
     {
         id: 32,
@@ -320,6 +351,7 @@ export const posts: Post[] = [
         createdAt: '26/02/2020',
         slug: '32',
         tags: 'Public Utilities',
+        category: 'Public Utilities',
     },
     {
         id: 33,
@@ -330,6 +362,7 @@ export const posts: Post[] = [
         createdAt: '04/06/2021',
         slug: '33',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 34,
@@ -340,6 +373,7 @@ export const posts: Post[] = [
         createdAt: '07/04/2021',
         slug: '34',
         tags: 'Energy',
+        category: 'Energy',
     },
     {
         id: 35,
@@ -350,6 +384,7 @@ export const posts: Post[] = [
         createdAt: '17/12/2020',
         slug: '35',
         tags: 'Consumer Durables',
+        category: 'Consumer Durables',
     },
     {
         id: 36,
@@ -360,6 +395,7 @@ export const posts: Post[] = [
         createdAt: '23/04/2021',
         slug: '36',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 37,
@@ -370,6 +406,7 @@ export const posts: Post[] = [
         createdAt: '08/11/2019',
         slug: '37',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 38,
@@ -380,6 +417,7 @@ export const posts: Post[] = [
         createdAt: '23/05/2021',
         slug: '38',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 39,
@@ -390,6 +428,7 @@ export const posts: Post[] = [
         createdAt: '08/06/2020',
         slug: '39',
         tags: 'Basic Industries',
+        category: 'Basic Industries',
     },
     {
         id: 40,
@@ -400,6 +439,7 @@ export const posts: Post[] = [
         createdAt: '13/09/2021',
         slug: '40',
         tags: 'Public Utilities',
+        category: 'Public Utilities',
     },
     {
         id: 41,
@@ -410,6 +450,7 @@ export const posts: Post[] = [
         createdAt: '16/08/2020',
         slug: '41',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 42,
@@ -420,6 +461,7 @@ export const posts: Post[] = [
         createdAt: '27/01/2020',
         slug: '42',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 43,
@@ -430,6 +472,7 @@ export const posts: Post[] = [
         createdAt: '08/03/2021',
         slug: '43',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 44,
@@ -440,6 +483,7 @@ export const posts: Post[] = [
         createdAt: '23/03/2020',
         slug: '44',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 45,
@@ -450,6 +494,7 @@ export const posts: Post[] = [
         createdAt: '16/05/2020',
         slug: '45',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 46,
@@ -460,6 +505,7 @@ export const posts: Post[] = [
         createdAt: '05/08/2020',
         slug: '46',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 47,
@@ -470,6 +516,7 @@ export const posts: Post[] = [
         createdAt: '20/06/2020',
         slug: '47',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 48,
@@ -480,6 +527,7 @@ export const posts: Post[] = [
         createdAt: '28/10/2019',
         slug: '48',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 49,
@@ -490,6 +538,7 @@ export const posts: Post[] = [
         createdAt: '27/01/2020',
         slug: '49',
         tags: 'Miscellaneous',
+        category: 'Miscellaneous',
     },
     {
         id: 50,
@@ -500,6 +549,7 @@ export const posts: Post[] = [
         createdAt: '12/04/2021',
         slug: '50',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 51,
@@ -510,6 +560,7 @@ export const posts: Post[] = [
         createdAt: '16/05/2020',
         slug: '51',
         tags: 'Energy',
+        category: 'Energy',
     },
     {
         id: 52,
@@ -520,6 +571,7 @@ export const posts: Post[] = [
         createdAt: '30/07/2020',
         slug: '52',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 53,
@@ -530,6 +582,7 @@ export const posts: Post[] = [
         createdAt: '22/11/2020',
         slug: '53',
         tags: 'Capital Goods',
+        category: 'Capital Goods',
     },
     {
         id: 54,
@@ -540,6 +593,7 @@ export const posts: Post[] = [
         createdAt: '03/07/2020',
         slug: '54',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 55,
@@ -550,6 +604,7 @@ export const posts: Post[] = [
         createdAt: '17/12/2019',
         slug: '55',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 56,
@@ -560,6 +615,7 @@ export const posts: Post[] = [
         createdAt: '19/10/2019',
         slug: '56',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 57,
@@ -570,6 +626,7 @@ export const posts: Post[] = [
         createdAt: '15/11/2021',
         slug: '57',
         tags: 'Public Utilities',
+        category: 'Public Utilities',
     },
     {
         id: 58,
@@ -580,6 +637,7 @@ export const posts: Post[] = [
         createdAt: '30/03/2021',
         slug: '58',
         tags: 'Energy',
+        category: 'Energy',
     },
     {
         id: 59,
@@ -590,6 +648,7 @@ export const posts: Post[] = [
         createdAt: '09/08/2020',
         slug: '59',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 60,
@@ -600,6 +659,7 @@ export const posts: Post[] = [
         createdAt: '20/09/2020',
         slug: '60',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 61,
@@ -610,6 +670,7 @@ export const posts: Post[] = [
         createdAt: '08/01/2020',
         slug: '61',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 62,
@@ -620,6 +681,7 @@ export const posts: Post[] = [
         createdAt: '09/01/2020',
         slug: '62',
         tags: 'Consumer Non-Durables',
+        category: 'Consumer Non-Durables',
     },
     {
         id: 63,
@@ -630,6 +692,7 @@ export const posts: Post[] = [
         createdAt: '18/01/2021',
         slug: '63',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 64,
@@ -640,6 +703,7 @@ export const posts: Post[] = [
         createdAt: '16/10/2020',
         slug: '64',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 65,
@@ -650,6 +714,7 @@ export const posts: Post[] = [
         createdAt: '27/08/2021',
         slug: '65',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 66,
@@ -660,6 +725,7 @@ export const posts: Post[] = [
         createdAt: '25/03/2021',
         slug: '66',
         tags: 'Consumer Durables',
+        category: 'Consumer Durables',
     },
     {
         id: 67,
@@ -670,6 +736,7 @@ export const posts: Post[] = [
         createdAt: '30/11/2019',
         slug: '67',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 68,
@@ -680,6 +747,7 @@ export const posts: Post[] = [
         createdAt: '24/08/2020',
         slug: '68',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 69,
@@ -690,6 +758,7 @@ export const posts: Post[] = [
         createdAt: '12/01/2021',
         slug: '69',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 70,
@@ -700,6 +769,7 @@ export const posts: Post[] = [
         createdAt: '03/12/2020',
         slug: '70',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 71,
@@ -710,6 +780,7 @@ export const posts: Post[] = [
         createdAt: '30/03/2021',
         slug: '71',
         tags: 'Miscellaneous',
+        category: 'Miscellaneous',
     },
     {
         id: 72,
@@ -720,6 +791,7 @@ export const posts: Post[] = [
         createdAt: '12/04/2020',
         slug: '72',
         tags: 'Basic Industries',
+        category: 'Basic Industries',
     },
     {
         id: 73,
@@ -730,6 +802,7 @@ export const posts: Post[] = [
         createdAt: '14/09/2020',
         slug: '73',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 74,
@@ -740,6 +813,7 @@ export const posts: Post[] = [
         createdAt: '27/08/2021',
         slug: '74',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 75,
@@ -750,6 +824,7 @@ export const posts: Post[] = [
         createdAt: '06/10/2020',
         slug: '75',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 76,
@@ -760,6 +835,7 @@ export const posts: Post[] = [
         createdAt: '01/01/2020',
         slug: '76',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 77,
@@ -770,6 +846,7 @@ export const posts: Post[] = [
         createdAt: '20/09/2021',
         slug: '77',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 78,
@@ -780,6 +857,7 @@ export const posts: Post[] = [
         createdAt: '14/01/2020',
         slug: '78',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 79,
@@ -790,6 +868,7 @@ export const posts: Post[] = [
         createdAt: '27/03/2020',
         slug: '79',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 80,
@@ -800,6 +879,7 @@ export const posts: Post[] = [
         createdAt: '10/07/2020',
         slug: '80',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 81,
@@ -810,6 +890,7 @@ export const posts: Post[] = [
         createdAt: '26/10/2020',
         slug: '81',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 82,
@@ -820,6 +901,7 @@ export const posts: Post[] = [
         createdAt: '22/11/2019',
         slug: '82',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 83,
@@ -830,6 +912,7 @@ export const posts: Post[] = [
         createdAt: '20/12/2020',
         slug: '83',
         tags: 'Consumer Durables',
+        category: 'Consumer Durables',
     },
     {
         id: 84,
@@ -840,6 +923,7 @@ export const posts: Post[] = [
         createdAt: '06/12/2020',
         slug: '84',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 85,
@@ -850,6 +934,7 @@ export const posts: Post[] = [
         createdAt: '29/01/2021',
         slug: '85',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 86,
@@ -860,6 +945,7 @@ export const posts: Post[] = [
         createdAt: '25/06/2020',
         slug: '86',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 87,
@@ -870,6 +956,7 @@ export const posts: Post[] = [
         createdAt: '15/04/2021',
         slug: '87',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 88,
@@ -880,6 +967,7 @@ export const posts: Post[] = [
         createdAt: '22/01/2021',
         slug: '88',
         tags: 'Basic Industries',
+        category: 'Basic Industries',
     },
     {
         id: 89,
@@ -890,6 +978,7 @@ export const posts: Post[] = [
         createdAt: '03/09/2019',
         slug: '89',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 90,
@@ -900,6 +989,7 @@ export const posts: Post[] = [
         createdAt: '05/11/2019',
         slug: '90',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 91,
@@ -910,6 +1000,7 @@ export const posts: Post[] = [
         createdAt: '30/06/2021',
         slug: '91',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 92,
@@ -920,6 +1011,7 @@ export const posts: Post[] = [
         createdAt: '23/04/2020',
         slug: '92',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 93,
@@ -930,6 +1022,7 @@ export const posts: Post[] = [
         createdAt: '13/01/2021',
         slug: '93',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 94,
@@ -940,6 +1033,7 @@ export const posts: Post[] = [
         createdAt: '21/05/2021',
         slug: '94',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 95,
@@ -950,6 +1044,7 @@ export const posts: Post[] = [
         createdAt: '03/06/2020',
         slug: '95',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 96,
@@ -960,6 +1055,7 @@ export const posts: Post[] = [
         createdAt: '27/10/2020',
         slug: '96',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 97,
@@ -970,6 +1066,7 @@ export const posts: Post[] = [
         createdAt: '18/03/2020',
         slug: '97',
         tags: 'Miscellaneous',
+        category: 'Miscellaneous',
     },
     {
         id: 98,
@@ -980,6 +1077,7 @@ export const posts: Post[] = [
         createdAt: '20/07/2021',
         slug: '98',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 99,
@@ -990,6 +1088,7 @@ export const posts: Post[] = [
         createdAt: '12/03/2020',
         slug: '99',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 100,
@@ -1000,6 +1099,7 @@ export const posts: Post[] = [
         createdAt: '19/12/2020',
         slug: '100',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 101,
@@ -1010,6 +1110,7 @@ export const posts: Post[] = [
         createdAt: '11/06/2020',
         slug: '101',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 102,
@@ -1020,6 +1121,7 @@ export const posts: Post[] = [
         createdAt: '25/01/2020',
         slug: '102',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 103,
@@ -1030,6 +1132,7 @@ export const posts: Post[] = [
         createdAt: '05/02/2020',
         slug: '103',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 104,
@@ -1040,6 +1143,7 @@ export const posts: Post[] = [
         createdAt: '22/06/2020',
         slug: '104',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 105,
@@ -1050,6 +1154,7 @@ export const posts: Post[] = [
         createdAt: '26/11/2020',
         slug: '105',
         tags: 'Basic Industries',
+        category: 'Basic Industries',
     },
     {
         id: 106,
@@ -1060,6 +1165,7 @@ export const posts: Post[] = [
         createdAt: '16/08/2021',
         slug: '106',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 107,
@@ -1070,6 +1176,7 @@ export const posts: Post[] = [
         createdAt: '22/02/2021',
         slug: '107',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 108,
@@ -1080,6 +1187,7 @@ export const posts: Post[] = [
         createdAt: '25/01/2021',
         slug: '108',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 109,
@@ -1090,6 +1198,7 @@ export const posts: Post[] = [
         createdAt: '13/09/2021',
         slug: '109',
         tags: 'Consumer Non-Durables',
+        category: 'Consumer Non-Durables',
     },
     {
         id: 110,
@@ -1100,6 +1209,7 @@ export const posts: Post[] = [
         createdAt: '19/04/2020',
         slug: '110',
         tags: 'Energy',
+        category: 'Energy',
     },
     {
         id: 111,
@@ -1110,6 +1220,7 @@ export const posts: Post[] = [
         createdAt: '04/11/2021',
         slug: '111',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 112,
@@ -1120,6 +1231,7 @@ export const posts: Post[] = [
         createdAt: '04/05/2020',
         slug: '112',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 113,
@@ -1130,6 +1242,7 @@ export const posts: Post[] = [
         createdAt: '29/10/2019',
         slug: '113',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 114,
@@ -1140,6 +1253,7 @@ export const posts: Post[] = [
         createdAt: '20/06/2020',
         slug: '114',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 115,
@@ -1150,6 +1264,7 @@ export const posts: Post[] = [
         createdAt: '18/10/2021',
         slug: '115',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 116,
@@ -1160,6 +1275,7 @@ export const posts: Post[] = [
         createdAt: '16/10/2020',
         slug: '116',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 117,
@@ -1170,6 +1286,7 @@ export const posts: Post[] = [
         createdAt: '24/06/2020',
         slug: '117',
         tags: 'Miscellaneous',
+        category: 'Miscellaneous',
     },
     {
         id: 118,
@@ -1180,6 +1297,7 @@ export const posts: Post[] = [
         createdAt: '25/05/2020',
         slug: '118',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 119,
@@ -1190,6 +1308,7 @@ export const posts: Post[] = [
         createdAt: '16/01/2020',
         slug: '119',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 120,
@@ -1200,6 +1319,7 @@ export const posts: Post[] = [
         createdAt: '18/06/2020',
         slug: '120',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 121,
@@ -1210,6 +1330,7 @@ export const posts: Post[] = [
         createdAt: '01/08/2020',
         slug: '121',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 122,
@@ -1220,6 +1341,7 @@ export const posts: Post[] = [
         createdAt: '19/11/2021',
         slug: '122',
         tags: 'Basic Industries',
+        category: 'Basic Industries',
     },
     {
         id: 123,
@@ -1230,6 +1352,7 @@ export const posts: Post[] = [
         createdAt: '25/01/2021',
         slug: '123',
         tags: 'Consumer Non-Durables',
+        category: 'Consumer Non-Durables',
     },
     {
         id: 124,
@@ -1240,6 +1363,7 @@ export const posts: Post[] = [
         createdAt: '14/12/2020',
         slug: '124',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 125,
@@ -1250,6 +1374,7 @@ export const posts: Post[] = [
         createdAt: '30/09/2021',
         slug: '125',
         tags: 'Consumer Non-Durables',
+        category: 'Consumer Non-Durables',
     },
     {
         id: 126,
@@ -1260,6 +1385,7 @@ export const posts: Post[] = [
         createdAt: '17/04/2020',
         slug: '126',
         tags: 'Miscellaneous',
+        category: 'Miscellaneous',
     },
     {
         id: 127,
@@ -1270,6 +1396,7 @@ export const posts: Post[] = [
         createdAt: '27/11/2021',
         slug: '127',
         tags: 'Energy',
+        category: 'Energy',
     },
     {
         id: 128,
@@ -1280,6 +1407,7 @@ export const posts: Post[] = [
         createdAt: '05/10/2021',
         slug: '128',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 129,
@@ -1290,6 +1418,7 @@ export const posts: Post[] = [
         createdAt: '09/11/2019',
         slug: '129',
         tags: 'Public Utilities',
+        category: 'Public Utilities',
     },
     {
         id: 130,
@@ -1300,6 +1429,7 @@ export const posts: Post[] = [
         createdAt: '14/04/2020',
         slug: '130',
         tags: 'Miscellaneous',
+        category: 'Miscellaneous',
     },
     {
         id: 131,
@@ -1310,6 +1440,7 @@ export const posts: Post[] = [
         createdAt: '25/09/2019',
         slug: '131',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 132,
@@ -1320,6 +1451,7 @@ export const posts: Post[] = [
         createdAt: '29/06/2021',
         slug: '132',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 133,
@@ -1330,6 +1462,7 @@ export const posts: Post[] = [
         createdAt: '27/05/2021',
         slug: '133',
         tags: 'Public Utilities',
+        category: 'Public Utilities',
     },
     {
         id: 134,
@@ -1340,6 +1473,7 @@ export const posts: Post[] = [
         createdAt: '23/10/2019',
         slug: '134',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 135,
@@ -1350,6 +1484,7 @@ export const posts: Post[] = [
         createdAt: '25/10/2019',
         slug: '135',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 136,
@@ -1360,6 +1495,7 @@ export const posts: Post[] = [
         createdAt: '27/05/2021',
         slug: '136',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 137,
@@ -1370,6 +1506,7 @@ export const posts: Post[] = [
         createdAt: '12/09/2020',
         slug: '137',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 138,
@@ -1380,6 +1517,7 @@ export const posts: Post[] = [
         createdAt: '17/08/2020',
         slug: '138',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 139,
@@ -1390,6 +1528,7 @@ export const posts: Post[] = [
         createdAt: '29/03/2021',
         slug: '139',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 140,
@@ -1400,6 +1539,7 @@ export const posts: Post[] = [
         createdAt: '14/09/2021',
         slug: '140',
         tags: 'Capital Goods',
+        category: 'Capital Goods',
     },
     {
         id: 141,
@@ -1410,6 +1550,7 @@ export const posts: Post[] = [
         createdAt: '11/09/2019',
         slug: '141',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 142,
@@ -1420,6 +1561,7 @@ export const posts: Post[] = [
         createdAt: '07/12/2020',
         slug: '142',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 143,
@@ -1430,6 +1572,7 @@ export const posts: Post[] = [
         createdAt: '28/10/2020',
         slug: '143',
         tags: 'Public Utilities',
+        category: 'Public Utilities',
     },
     {
         id: 144,
@@ -1440,6 +1583,7 @@ export const posts: Post[] = [
         createdAt: '13/10/2021',
         slug: '144',
         tags: 'Miscellaneous',
+        category: 'Miscellaneous',
     },
     {
         id: 145,
@@ -1450,6 +1594,7 @@ export const posts: Post[] = [
         createdAt: '14/12/2019',
         slug: '145',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 146,
@@ -1460,6 +1605,7 @@ export const posts: Post[] = [
         createdAt: '19/04/2021',
         slug: '146',
         tags: 'Public Utilities',
+        category: 'Public Utilities',
     },
     {
         id: 147,
@@ -1470,6 +1616,7 @@ export const posts: Post[] = [
         createdAt: '04/01/2021',
         slug: '147',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 148,
@@ -1480,6 +1627,7 @@ export const posts: Post[] = [
         createdAt: '07/12/2019',
         slug: '148',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 149,
@@ -1490,6 +1638,7 @@ export const posts: Post[] = [
         createdAt: '29/03/2021',
         slug: '149',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 150,
@@ -1500,6 +1649,7 @@ export const posts: Post[] = [
         createdAt: '03/11/2021',
         slug: '150',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 151,
@@ -1510,6 +1660,7 @@ export const posts: Post[] = [
         createdAt: '06/10/2021',
         slug: '151',
         tags: 'Energy',
+        category: 'Energy',
     },
     {
         id: 152,
@@ -1520,6 +1671,7 @@ export const posts: Post[] = [
         createdAt: '29/08/2021',
         slug: '152',
         tags: 'Capital Goods',
+        category: 'Capital Goods',
     },
     {
         id: 153,
@@ -1530,6 +1682,7 @@ export const posts: Post[] = [
         createdAt: '04/02/2020',
         slug: '153',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 154,
@@ -1540,6 +1693,7 @@ export const posts: Post[] = [
         createdAt: '19/11/2019',
         slug: '154',
         tags: 'Capital Goods',
+        category: 'Capital Goods',
     },
     {
         id: 155,
@@ -1550,6 +1704,7 @@ export const posts: Post[] = [
         createdAt: '01/06/2020',
         slug: '155',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 156,
@@ -1560,6 +1715,7 @@ export const posts: Post[] = [
         createdAt: '03/04/2020',
         slug: '156',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 157,
@@ -1570,6 +1726,7 @@ export const posts: Post[] = [
         createdAt: '13/07/2021',
         slug: '157',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 158,
@@ -1580,6 +1737,7 @@ export const posts: Post[] = [
         createdAt: '11/08/2020',
         slug: '158',
         tags: 'Basic Industries',
+        category: 'Basic Industries',
     },
     {
         id: 159,
@@ -1590,6 +1748,7 @@ export const posts: Post[] = [
         createdAt: '11/10/2021',
         slug: '159',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 160,
@@ -1600,6 +1759,7 @@ export const posts: Post[] = [
         createdAt: '14/03/2021',
         slug: '160',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 161,
@@ -1610,6 +1770,7 @@ export const posts: Post[] = [
         createdAt: '14/06/2020',
         slug: '161',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 162,
@@ -1620,6 +1781,7 @@ export const posts: Post[] = [
         createdAt: '21/03/2021',
         slug: '162',
         tags: 'Energy',
+        category: 'Energy',
     },
     {
         id: 163,
@@ -1630,6 +1792,7 @@ export const posts: Post[] = [
         createdAt: '28/09/2021',
         slug: '163',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 164,
@@ -1640,6 +1803,7 @@ export const posts: Post[] = [
         createdAt: '24/09/2021',
         slug: '164',
         tags: 'Energy',
+        category: 'Energy',
     },
     {
         id: 165,
@@ -1650,6 +1814,7 @@ export const posts: Post[] = [
         createdAt: '05/09/2019',
         slug: '165',
         tags: 'Basic Industries',
+        category: 'Basic Industries',
     },
     {
         id: 166,
@@ -1660,6 +1825,7 @@ export const posts: Post[] = [
         createdAt: '12/11/2021',
         slug: '166',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 167,
@@ -1670,6 +1836,7 @@ export const posts: Post[] = [
         createdAt: '22/02/2021',
         slug: '167',
         tags: 'Consumer Durables',
+        category: 'Consumer Durables',
     },
     {
         id: 168,
@@ -1680,6 +1847,7 @@ export const posts: Post[] = [
         createdAt: '02/11/2019',
         slug: '168',
         tags: 'Transportation',
+        category: 'Transportation',
     },
     {
         id: 169,
@@ -1690,6 +1858,7 @@ export const posts: Post[] = [
         createdAt: '21/11/2020',
         slug: '169',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 170,
@@ -1700,6 +1869,7 @@ export const posts: Post[] = [
         createdAt: '09/10/2019',
         slug: '170',
         tags: 'Public Utilities',
+        category: 'Public Utilities',
     },
     {
         id: 171,
@@ -1710,6 +1880,7 @@ export const posts: Post[] = [
         createdAt: '16/08/2020',
         slug: '171',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 172,
@@ -1720,6 +1891,7 @@ export const posts: Post[] = [
         createdAt: '05/12/2020',
         slug: '172',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 173,
@@ -1730,6 +1902,7 @@ export const posts: Post[] = [
         createdAt: '01/05/2021',
         slug: '173',
         tags: 'Health Care',
+        category: 'Health Care',
     },
     {
         id: 174,
@@ -1740,6 +1913,7 @@ export const posts: Post[] = [
         createdAt: '10/07/2021',
         slug: '174',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 175,
@@ -1750,6 +1924,7 @@ export const posts: Post[] = [
         createdAt: '08/11/2019',
         slug: '175',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 176,
@@ -1760,6 +1935,7 @@ export const posts: Post[] = [
         createdAt: '03/08/2021',
         slug: '176',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 177,
@@ -1770,6 +1946,7 @@ export const posts: Post[] = [
         createdAt: '18/10/2019',
         slug: '177',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 178,
@@ -1780,6 +1957,7 @@ export const posts: Post[] = [
         createdAt: '18/12/2019',
         slug: '178',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 179,
@@ -1790,6 +1968,7 @@ export const posts: Post[] = [
         createdAt: '05/05/2021',
         slug: '179',
         tags: 'Energy',
+        category: 'Energy',
     },
     {
         id: 180,
@@ -1800,6 +1979,7 @@ export const posts: Post[] = [
         createdAt: '20/06/2021',
         slug: '180',
         tags: 'Basic Industries',
+        category: 'Basic Industries',
     },
     {
         id: 181,
@@ -1810,6 +1990,7 @@ export const posts: Post[] = [
         createdAt: '20/05/2021',
         slug: '181',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 182,
@@ -1820,6 +2001,7 @@ export const posts: Post[] = [
         createdAt: '26/10/2019',
         slug: '182',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 183,
@@ -1830,6 +2012,7 @@ export const posts: Post[] = [
         createdAt: '07/11/2020',
         slug: '183',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 184,
@@ -1840,6 +2023,7 @@ export const posts: Post[] = [
         createdAt: '27/06/2020',
         slug: '184',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
     {
         id: 185,
@@ -1850,6 +2034,7 @@ export const posts: Post[] = [
         createdAt: '28/08/2020',
         slug: '185',
         tags: 'Transportation',
+        category: 'Transportation',
     },
     {
         id: 186,
@@ -1860,6 +2045,7 @@ export const posts: Post[] = [
         createdAt: '09/11/2019',
         slug: '186',
         tags: 'Capital Goods',
+        category: 'Capital Goods',
     },
     {
         id: 187,
@@ -1870,6 +2056,7 @@ export const posts: Post[] = [
         createdAt: '18/03/2021',
         slug: '187',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 188,
@@ -1880,6 +2067,7 @@ export const posts: Post[] = [
         createdAt: '09/03/2021',
         slug: '188',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 189,
@@ -1890,6 +2078,7 @@ export const posts: Post[] = [
         createdAt: '17/09/2019',
         slug: '189',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 190,
@@ -1900,6 +2089,7 @@ export const posts: Post[] = [
         createdAt: '16/06/2021',
         slug: '190',
         tags: 'Miscellaneous',
+        category: 'Miscellaneous',
     },
     {
         id: 191,
@@ -1910,6 +2100,7 @@ export const posts: Post[] = [
         createdAt: '16/03/2020',
         slug: '191',
         tags: 'Public Utilities',
+        category: 'Public Utilities',
     },
     {
         id: 192,
@@ -1920,6 +2111,7 @@ export const posts: Post[] = [
         createdAt: '24/07/2020',
         slug: '192',
         tags: 'Consumer Non-Durables',
+        category: 'Consumer Non-Durables',
     },
     {
         id: 193,
@@ -1930,6 +2122,7 @@ export const posts: Post[] = [
         createdAt: '08/04/2021',
         slug: '193',
         tags: 'Finance',
+        category: 'Finance',
     },
     {
         id: 194,
@@ -1940,6 +2133,7 @@ export const posts: Post[] = [
         createdAt: '17/12/2019',
         slug: '194',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 195,
@@ -1950,6 +2144,7 @@ export const posts: Post[] = [
         createdAt: '23/10/2019',
         slug: '195',
         tags: 'Technology',
+        category: 'Technology',
     },
     {
         id: 196,
@@ -1960,6 +2155,7 @@ export const posts: Post[] = [
         createdAt: '27/08/2021',
         slug: '196',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 197,
@@ -1970,6 +2166,7 @@ export const posts: Post[] = [
         createdAt: '15/01/2020',
         slug: '197',
         tags: 'Transportation',
+        category: 'Transportation',
     },
     {
         id: 198,
@@ -1980,6 +2177,7 @@ export const posts: Post[] = [
         createdAt: '03/07/2021',
         slug: '198',
         tags: 'Transportation',
+        category: 'Transportation',
     },
     {
         id: 199,
@@ -1990,6 +2188,7 @@ export const posts: Post[] = [
         createdAt: '25/09/2020',
         slug: '199',
         tags: 'n/a',
+        category: 'n/a',
     },
     {
         id: 200,
@@ -2000,5 +2199,6 @@ export const posts: Post[] = [
         createdAt: '26/02/2020',
         slug: '200',
         tags: 'Consumer Services',
+        category: 'Consumer Services',
     },
 ];

@@ -5,85 +5,96 @@ import PostCard from '../components/cards/PostCard';
 import PhotoCards from '../components/home/PhotoCards';
 import NewsletterForm from '../components/NewsletterForm';
 import Layout from '../components/Layout';
-import { posts } from '../utils/sample-data';
-import styles from '../constants/styles';
+import { posts as allPosts } from '../utils/sample-data';
+import { GetStaticProps } from 'next';
+import { Post } from '../interfaces';
+import SocialCard from '../components/cards/SocialCard';
 
-const IndexPage = () => {
+const latestPostsLength = 10;
+type Props = {
+    posts?: Post[];
+    errors?: string;
+};
+
+const IndexPage = ({ posts }: Props) => {
     const router = useRouter();
+    const items = posts ?? [];
 
     const onClickPost = (slug: string) => {
         router.push(`/posts/${slug}`);
+        window.scrollTo(0, 0);
     };
 
     return (
-        <Layout title="Home | Modern News" padding="1.5rem">
+        <Layout title="Home | Modern News" px={{ base: '.6em', md: '1.2em' }} py="1.4em">
             <Box as="section">
-                <Heading marginX="1.4rem" marginBottom="1rem" fontSize={'1.6rem'} color="default" fontWeight="300">
+                <Heading marginX=".1em" marginBottom=".6em" fontSize={'1.6em'} color="default" fontWeight="300">
                     Trending
                 </Heading>
-                <PhotoCards
-                    onClickPost={({ slug }) => onClickPost(slug)}
-                    containerHeight={540}
-                    post1={posts[0]}
-                    post2={posts[1]}
-                    post3={posts[2]}
-                    post4={posts[3]}
-                />
+                {items.length >= 4 && (
+                    <PhotoCards
+                        onClickPost={({ slug }) => onClickPost(slug)}
+                        containerHeight={540}
+                        post1={items[0]}
+                        post2={items[1]}
+                        post3={items[2]}
+                        post4={items[3]}
+                    />
+                )}
             </Box>
-            <Divider marginX="2rem" marginY="1.2rem" />
-            <Heading marginX="1.4rem" marginTop="2rem" fontSize={'1.6rem'} color="default" fontWeight="300">
+            <Divider width="80%" mt="1.6rem" mb=".3rem" mx="auto" />
+            <Heading marginX=".1em" marginTop="1em" fontSize={'1.6em'} color="default" fontWeight="300">
                 Latest News
             </Heading>
-            <Box d="flex">
-                <Box d="flex" flexDirection="column" flex="4" as="section" margin={'.7rem'}>
-                    {posts.slice(4, 10).map((post) => {
-                        return (
-                            <PostCard
-                                key={post.id}
-                                title={post.title}
-                                content={post.content}
-                                date={post.createdAt}
-                                imgSrc={post.img}
-                                imgAlt={'Photo for ' + post.title}
-                                height={'220px'}
-                                onClick={() => onClickPost(post.slug)}
-                            />
-                        );
-                    })}
+            <Box d="flex" flexDirection={{ base: 'column', lg: 'row' }}>
+                <Box d="flex" flexDirection="column" flex="4" as="section" marginY={'.7em'}>
+                    {items.length > 4 &&
+                        items.slice(4, 4 + latestPostsLength).map((post) => {
+                            return <PostCard post={post} key={post.id} onClick={() => onClickPost(post.slug)} />;
+                        })}
                     <Button w="100%" variant="ghost">
                         Load More
                     </Button>
                 </Box>
-                <Box flex="2" flexDirection="column" as="section" margin={'10px'}>
-                    <NewsletterForm onSubmit={(email) => console.log(email)} marginY="10px" />
-                    <Box backgroundColor="#fbfbfb" borderRadius={styles.borderRadius} padding=".8rem" marginY="10px">
-                        <Text color="primary" textAlign="center" marginY=".8rem" fontWeight="bold">
+                <Box flex="2" flexDirection="column" as="section" marginBottom={'10px'} marginX="8px">
+                    <Box>
+                        <Text color="primary" textAlign="center" marginBottom=".8em" fontWeight="bold">
                             Most Reading Today
                         </Text>
-                        {posts.slice(12, 15).map((post) => {
+                        {items.slice(12, 15).map((post) => {
                             return (
                                 <PostCard
+                                    column
+                                    post={post}
                                     key={post.id}
-                                    title={post.title.slice(0, 120) + '...'}
-                                    titleFontSize={'1rem'}
-                                    content={''}
-                                    date={''}
-                                    imgSrc={post.img}
-                                    imgAlt={'Photo for ' + post.title}
-                                    height={'160px'}
+                                    titleFontSize={'1em'}
                                     onClick={() => onClickPost(post.slug)}
                                 />
                             );
                         })}
                     </Box>
-                    {/**
-                     * //TODO
-                     *  Follow Us
-                     */}
+                    <NewsletterForm onSubmitForm={(email) => console.log(email)} marginY="10px" />
+                    <SocialCard
+                        title="Follow Us"
+                        facebook
+                        twitter
+                        linkedin
+                        youtube
+                        instagram
+                        onClick={(platform) => console.log(platform)}
+                    />
                 </Box>
             </Box>
         </Layout>
     );
+};
+
+export const getStaticProps: GetStaticProps = async ({}) => {
+    try {
+        return { props: { posts: allPosts } };
+    } catch (err) {
+        return { props: { errors: err.message } };
+    }
 };
 
 export default IndexPage;

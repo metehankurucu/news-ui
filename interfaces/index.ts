@@ -5,6 +5,7 @@ export type Post = {
     title: string;
     content: string;
     tags?: string;
+    category: string;
     createdAt?: Date | string;
     author?: PostAuthor;
 };

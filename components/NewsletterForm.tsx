@@ -1,21 +1,15 @@
 import React from 'react';
 import { Box, Text, Input, Button, Link, BoxProps } from '@chakra-ui/react';
 import styles from '../constants/styles';
+import Card from './cards/Card';
 
 interface Props extends BoxProps {
-    onSubmit: (email: string) => void;
+    onSubmitForm: (email: string) => void;
 }
 
-const NewsletterForm = ({ onSubmit, ...props }: Props) => {
+const NewsletterForm = ({ onSubmitForm, ...props }: Props) => {
     return (
-        <Box
-            flex="1"
-            padding="1.2rem"
-            textAlign="center"
-            backgroundColor="#fbfbfb"
-            borderRadius={styles.borderRadius}
-            {...props}
-        >
+        <Card textAlign="center" {...props}>
             <Text color="primary" fontWeight="bold" margin=".5rem">
                 Subscribe Our Newsletter
             </Text>
@@ -29,7 +23,7 @@ const NewsletterForm = ({ onSubmit, ...props }: Props) => {
                     Privacy Policy
                 </Link>
             </Text>
-        </Box>
+        </Card>
     );
 };
 
