@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
-import { CloseIcon } from '@chakra-ui/icons';
 import { FaBars } from 'react-icons/fa';
 
 interface Props {

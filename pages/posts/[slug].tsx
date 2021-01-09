@@ -1,6 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Layout from '../../components/Layout';
-import { Box, Button, Heading, Text } from '@chakra-ui/react';
+import { Box, Heading, Text } from '@chakra-ui/react';
 import { posts } from '../../utils/sample-data';
 import { Post } from '../../interfaces';
 import styles from '../../constants/styles';
@@ -10,8 +10,8 @@ import AuthorCard from '../../components/cards/AuthorCard';
 import PostCard from '../../components/cards/PostCard';
 import SocialCard from '../../components/cards/SocialCard';
 import { useRouter } from 'next/router';
-import _ from 'lodash';
 import useColorTheme from '../../hooks/useColorTheme';
+import _ from 'lodash';
 
 type Props = {
     post?: Post;
