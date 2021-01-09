@@ -1,8 +1,6 @@
 import React from 'react';
-import { Box, Text, Input, Button, Link, BoxProps } from '@chakra-ui/react';
-import styles from '../constants/styles';
+import { Text, Input, Button, Link, BoxProps } from '@chakra-ui/react';
 import Card from './cards/Card';
-
 interface Props extends BoxProps {
     onSubmitForm: (email: string) => void;
 }
@@ -14,7 +12,7 @@ const NewsletterForm = ({ onSubmitForm, ...props }: Props) => {
                 Subscribe Our Newsletter
             </Text>
             <Input variant="outline" placeholder="Your Email Address" borderRadius={'full'} margin=".5rem" />
-            <Button bgColor="primary" color="#fff" borderRadius={'full'} width="100%" margin=".5rem">
+            <Button bgColor="primary" color="light" borderRadius={'full'} width="100%" margin=".5rem">
                 Subscribe
             </Button>
             <Text fontSize=".7rem" margin="3px">

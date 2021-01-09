@@ -11,9 +11,7 @@ const MenuItem: React.FC<Props> = ({ children, isLast = false, to = '/', ...rest
     return (
         <Box variant={'ghost'} as={Button} {...rest}>
             <Link href={to}>
-                <Text color="secondary" display="block">
-                    {children}
-                </Text>
+                <Text display="block">{children}</Text>
             </Link>
         </Box>
     );

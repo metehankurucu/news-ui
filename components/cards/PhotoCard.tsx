@@ -50,7 +50,7 @@ const PhotoCard: React.FC<Props> = ({
                 position="absolute"
                 bottom="30px"
                 left="30px"
-                color="#fff"
+                color="light"
             >
                 {title.toUpperCase()}
             </Heading>

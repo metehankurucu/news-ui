@@ -9,6 +9,7 @@ import { posts as allPosts } from '../utils/sample-data';
 import { GetStaticProps } from 'next';
 import { Post } from '../interfaces';
 import SocialCard from '../components/cards/SocialCard';
+import useColorTheme from '../hooks/useColorTheme';
 
 const latestPostsLength = 10;
 type Props = {
@@ -17,6 +18,8 @@ type Props = {
 };
 
 const IndexPage = ({ posts }: Props) => {
+    const colors = useColorTheme();
+
     const router = useRouter();
     const items = posts ?? [];
 
@@ -28,7 +31,7 @@ const IndexPage = ({ posts }: Props) => {
     return (
         <Layout title="Home | Modern News" px={{ base: '.6em', md: '1.2em' }} py="1.4em">
             <Box as="section">
-                <Heading marginX=".1em" marginBottom=".6em" fontSize={'1.6em'} color="default" fontWeight="300">
+                <Heading marginX=".1em" marginBottom=".6em" fontSize={'1.6em'} color={colors.default} fontWeight="300">
                     Trending
                 </Heading>
                 {items.length >= 4 && (
@@ -43,7 +46,7 @@ const IndexPage = ({ posts }: Props) => {
                 )}
             </Box>
             <Divider width="80%" mt="1.6rem" mb=".3rem" mx="auto" />
-            <Heading marginX=".1em" marginTop="1em" fontSize={'1.6em'} color="default" fontWeight="300">
+            <Heading marginX=".1em" marginTop="1em" fontSize={'1.6em'} color={colors.default} fontWeight="300">
                 Latest News
             </Heading>
             <Box d="flex" flexDirection={{ base: 'column', lg: 'row' }}>

@@ -6,6 +6,8 @@ import MenuItem from './MenuItem';
 import Link from 'next/link';
 import styles from '../../constants/styles';
 import DrawerMenu from './DrawerMenu';
+import ThemeToggler from '../ThemeToggler';
+import useColorTheme from '../../hooks/useColorTheme';
 
 const NAVBAR_LINKS = [
     {
@@ -31,9 +33,10 @@ interface Props {}
 const Navbar: React.FC<Props> = () => {
     const [isOpen, setIsOpen] = React.useState(false);
     const toggle = () => setIsOpen(!isOpen);
+    const colors = useColorTheme();
 
     return (
-        <Box margin={0} borderBottom="1px" borderColor="gray.200">
+        <Box margin={0} borderBottom="1px" borderColor={colors.border}>
             <Flex
                 as="nav"
                 align="center"
@@ -48,11 +51,11 @@ const Navbar: React.FC<Props> = () => {
             >
                 <Button variant="ghost">
                     <Link href="/">
-                        <Logo color={'primary'} />
+                        <Logo color={colors.primary} />
                     </Link>
                 </Button>
                 <MenuToggle toggle={toggle} isOpen={isOpen} />
-                <Box display={{ base: 'none', md: 'block' }} flexBasis={{ base: '100%', md: 'auto' }}>
+                <Box display={{ base: 'none', md: 'flex' }} flexBasis={{ base: '100%', md: 'auto' }}>
                     <Stack
                         spacing={8}
                         align="center"
@@ -61,18 +64,24 @@ const Navbar: React.FC<Props> = () => {
                         pt={[4, 4, 0, 0]}
                     >
                         {NAVBAR_LINKS.map(({ to, name }) => {
-                            return <MenuItem to={to}>{name}</MenuItem>;
+                            return (
+                                <MenuItem color={colors.secondary} key={name} to={to}>
+                                    {name}
+                                </MenuItem>
+                            );
                         })}
                     </Stack>
+                    <ThemeToggler d={{ base: 'none', md: 'flex' }} />
                 </Box>
                 <DrawerMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
                     {NAVBAR_LINKS.map(({ to, name }) => {
                         return (
-                            <MenuItem w="100%" to={to} onClick={() => setIsOpen(false)}>
+                            <MenuItem w="100%" key={name} to={to} onClick={() => setIsOpen(false)}>
                                 {name}
                             </MenuItem>
                         );
                     })}
+                    <ThemeToggler w="100%" d={{ base: 'flex', md: 'none' }} />
                 </DrawerMenu>
             </Flex>
         </Box>

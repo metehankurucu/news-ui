@@ -1,20 +1,22 @@
 import { Box, BoxProps } from '@chakra-ui/react';
 import React from 'react';
 import styles from '../../constants/styles';
+import useColorTheme from '../../hooks/useColorTheme';
 
 interface Props extends BoxProps {}
 
 const Card = ({ children, ...props }: Props) => {
+    const colors = useColorTheme();
     return (
         <Box
             paddingX="1rem"
             paddingY=".5rem"
             boxShadow="sm"
             borderWidth="0.1px"
-            borderColor="#f0f0f0"
-            backgroundColor="#fefefe"
             borderRadius={styles.borderRadius}
             {...props}
+            bgColor={colors.background}
+            borderColor={colors.border}
         >
             {children}
         </Box>

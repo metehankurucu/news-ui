@@ -3,31 +3,14 @@ import type { AppProps /*, AppContext */ } from 'next/app';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import '../styles/index.css';
 import { Fonts } from '../fonts';
-
-const theme = extendTheme({
-    colors: {
-        primary: '#E31421',
-        default: '#494949',
-        secondary: '#08002F',
-        youtube: {
-            500: '#FF0000',
-        },
-        instagram: {
-            500: '#E1306C',
-        },
-    },
-    fonts: {
-        heading: 'Inter',
-        body: 'Inter',
-    },
-});
+import { Chakra } from '../Chakra';
 
 function Application({ Component, pageProps }: AppProps) {
     return (
-        <ChakraProvider theme={theme}>
+        <Chakra cookies={pageProps.cookies}>
             <Fonts />
             <Component {...pageProps} />
-        </ChakraProvider>
+        </Chakra>
     );
 }
 
@@ -42,5 +25,7 @@ function Application({ Component, pageProps }: AppProps) {
 
 //   return { ...appProps }
 // }
+
+export { getServerSideProps } from '../Chakra';
 
 export default Application;

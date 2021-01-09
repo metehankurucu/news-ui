@@ -11,6 +11,7 @@ import PostCard from '../../components/cards/PostCard';
 import SocialCard from '../../components/cards/SocialCard';
 import { useRouter } from 'next/router';
 import _ from 'lodash';
+import useColorTheme from '../../hooks/useColorTheme';
 
 type Props = {
     post?: Post;
@@ -20,6 +21,7 @@ type Props = {
 
 const PostDetail = ({ post, morePosts, errors }: Props) => {
     const router = useRouter();
+    const colors = useColorTheme();
 
     const onClickPost = (slug: string) => {
         router.push(`/posts/${slug}`);
@@ -51,7 +53,7 @@ const PostDetail = ({ post, morePosts, errors }: Props) => {
             <Box d="flex" flexDirection={{ base: 'column', md: 'row' }}>
                 <Box as="section" d="flex" flex="3">
                     <Box as="article" margin=".5rem">
-                        <Heading marginY="1.4rem" color="secondary">
+                        <Heading marginY="1.4rem" color={colors.secondary}>
                             {_.upperFirst(post?.title)}
                         </Heading>
                         <Text>
@@ -79,7 +81,7 @@ const PostDetail = ({ post, morePosts, errors }: Props) => {
                 </Box>
             </Box>
             <Box as="section">
-                <Heading marginX="1.4rem" marginTop="2rem" fontSize={'1.6rem'} color="default" fontWeight="300">
+                <Heading marginX="1.4rem" marginTop="2rem" fontSize={'1.6rem'} color={colors.default} fontWeight="300">
                     Browse More News
                 </Heading>
                 <Box d="flex" flexDirection="column" flex="4" as="section" margin={'.3rem'}>

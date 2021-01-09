@@ -5,6 +5,7 @@ import { Post } from '../../interfaces';
 import Image from '../Image';
 import Card from './Card';
 import _ from 'lodash';
+import useColorTheme from '../../hooks/useColorTheme';
 interface Props extends BoxProps {
     post: Post;
     column?: boolean;
@@ -23,21 +24,21 @@ const PostCard = ({
     ...props
 }: Props) => {
     const [hover, setHover] = useState(false);
+    const colors = useColorTheme();
 
     return (
         <Card
-            marginY=".5rem"
             p={4}
             display={{ md: 'flex' }}
             justifyContent="flex-start"
             flexDirection={{ base: 'column', md: column ? 'column' : 'row' }}
-            borderColor="#f0f0f0"
             cursor="pointer"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             style={{ transform: `scale(${hover ? 1.01 : 1})` }}
             transition="ease-in 0.2s"
             overflow="hidden"
+            marginY=".5rem"
             {...props}
         >
             <Box>
@@ -51,7 +52,13 @@ const PostCard = ({
                 />
             </Box>
             <Box mt={{ base: 4, md: 2 }} ml={{ md: 6 }}>
-                <Text fontWeight="bold" textTransform="uppercase" fontSize="sm" letterSpacing="wide" color="primary">
+                <Text
+                    fontWeight="bold"
+                    textTransform="uppercase"
+                    fontSize="sm"
+                    letterSpacing="wide"
+                    color={colors.primary}
+                >
                     {post.category}
                 </Text>
                 <Text
@@ -61,7 +68,7 @@ const PostCard = ({
                     lineHeight="normal"
                     fontWeight="semibold"
                     href="#"
-                    color="secondary"
+                    color={colors.secondary}
                 >
                     {_.upperFirst(post.title)}
                 </Text>
@@ -71,48 +78,6 @@ const PostCard = ({
                 </Text>
             </Box>
         </Card>
-        // <Card
-        //     d="flex"
-        //     justifyContent="flex-start"
-        //     flexDirection={{ base: 'column', md: 'row' }}
-        //     marginY=".5rem"
-        //     borderColor="#f0f0f0"
-        //     cursor="pointer"
-        //     onMouseEnter={() => setHover(true)}
-        //     onMouseLeave={() => setHover(false)}
-        //     style={{ transform: `scale(${hover ? 1.01 : 1})` }}
-        //     transition="ease-in 0.2s"
-        //     overflow="hidden"
-        //     {...props}
-        // >
-        //     <Box flexShrink={0} d="flex" flex={{ base: '1', md: '3' }}>
-        //         <Image src={imgSrc} alt={imgAlt} objectFit="cover" borderRadius={styles.borderRadius} />
-        //     </Box>
-        //     <Box
-        //         d="flex"
-        //         flexDirection="column"
-        //         flex={{ base: '2', md: '6' }}
-        //         padding={'.5rem'}
-        //         justifyContent="flex-start"
-        //     >
-        //         <Skeleton marginY={'.2rem'} borderRadius={styles} isLoaded={!skeleton}>
-        //             <Heading lineHeight="normal" fontWeight="semibold" color={'#000'} fontSize={titleFontSize}>
-        //                 {_.upperFirst(title)}
-        //             </Heading>
-        //         </Skeleton>
-        //         <Skeleton marginY={'.2rem'} isLoaded={!skeleton}>
-        //             <Text fontSize="1rem">
-        //                 {content.substr(0, 120)}
-        //                 {content.length > 120 ? '...' : ''}
-        //             </Text>
-        //         </Skeleton>
-        //         <Skeleton marginY={'.2rem'} isLoaded={!skeleton}>
-        //             <Text fontSize=".7rem" color="gray.500" fontWeight="bold">
-        //                 {date}
-        //             </Text>
-        //         </Skeleton>
-        //     </Box>
-        // </Card>
     );
 };
 

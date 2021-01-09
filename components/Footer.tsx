@@ -1,8 +1,9 @@
 import React from 'react';
-import { Box, Divider, Flex, Text } from '@chakra-ui/react';
+import { Box, Divider, Flex, Text, useColorModeValue } from '@chakra-ui/react';
 import Link from 'next/link';
 import styles from '../constants/styles';
 import Logo from './Logo';
+import useColorTheme from '../hooks/useColorTheme';
 
 const links = [
     {
@@ -42,18 +43,20 @@ const bottomLinks = [
 interface Props {}
 
 const Footer: React.FC<Props> = () => {
+    const colors = useColorTheme();
+    const bg = useColorModeValue(colors.secondary, colors.background);
     return (
         <Box
             as="footer"
             margin={0}
             borderTop="1px"
-            borderColor="gray.200"
+            borderColor={colors.border}
             boxShadow="lg"
             paddingX={{ base: '.4rem', md: '1rem' }}
             paddingBottom={'2rem'}
             paddingTop="2.4rem"
-            color="#fff"
-            bgColor="secondary"
+            color={colors.white}
+            bgColor={bg}
         >
             <Box maxW={styles.mainMaxWidth} p={'1.5rem'} mx={'auto'}>
                 <Flex
@@ -71,7 +74,7 @@ const Footer: React.FC<Props> = () => {
                                 </Link>
                             </Box>
 
-                            <Box color="gray.400" fontSize=".85em" mx={'3px'}>
+                            <Box color={colors.white} fontSize=".85em" mx={'3px'}>
                                 <Text>(916) 728-5682 989</Text>
                                 <Text>Vintage Oak Ave Galt</Text>
                                 <Text>California(CA), 95632</Text>
@@ -98,7 +101,7 @@ const Footer: React.FC<Props> = () => {
                                                         margin="2px"
                                                         fontSize={'.95rem'}
                                                         cursor="pointer"
-                                                        color={'gray.400'}
+                                                        color={colors.white}
                                                         _hover={{ textDecoration: 'underline' }}
                                                     >
                                                         {title}
