@@ -5,6 +5,26 @@ import Logo from '../Logo';
 import MenuItem from './MenuItem';
 import Link from 'next/link';
 import styles from '../../constants/styles';
+import DrawerMenu from './DrawerMenu';
+
+const NAVBAR_LINKS = [
+    {
+        to: '/',
+        name: 'Home',
+    },
+    {
+        to: '/',
+        name: 'Magazine',
+    },
+    {
+        to: '/',
+        name: 'Sports',
+    },
+    {
+        to: '/',
+        name: 'Economy',
+    },
+];
 
 interface Props {}
 
@@ -25,7 +45,6 @@ const Navbar: React.FC<Props> = () => {
                 pr={{ base: 4, md: 6 }}
                 maxW={styles.mainMaxWidth}
                 mx={'auto'}
-                bg={['primary.500', 'primary.500', 'transparent', 'transparent']}
             >
                 <Button variant="ghost">
                     <Link href="/">
@@ -41,12 +60,20 @@ const Navbar: React.FC<Props> = () => {
                         direction={['column', 'row', 'row', 'row']}
                         pt={[4, 4, 0, 0]}
                     >
-                        <MenuItem to="/">Home</MenuItem>
-                        <MenuItem to="/">Magazine</MenuItem>
-                        <MenuItem to="/">Sports</MenuItem>
-                        <MenuItem to="/">Economy</MenuItem>
+                        {NAVBAR_LINKS.map(({ to, name }) => {
+                            return <MenuItem to={to}>{name}</MenuItem>;
+                        })}
                     </Stack>
                 </Box>
+                <DrawerMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
+                    {NAVBAR_LINKS.map(({ to, name }) => {
+                        return (
+                            <MenuItem w="100%" to={to} onClick={() => setIsOpen(false)}>
+                                {name}
+                            </MenuItem>
+                        );
+                    })}
+                </DrawerMenu>
             </Flex>
         </Box>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Divider, Flex, Text } from '@chakra-ui/react';
+import { Box, Divider, Flex, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import styles from '../constants/styles';
 import Logo from './Logo';
@@ -43,7 +43,18 @@ interface Props {}
 
 const Footer: React.FC<Props> = () => {
     return (
-        <Box as="footer" margin={0} borderTop="1px" borderColor="gray.200" boxShadow="lg" padding="1rem">
+        <Box
+            as="footer"
+            margin={0}
+            borderTop="1px"
+            borderColor="gray.200"
+            boxShadow="lg"
+            paddingX={{ base: '.4rem', md: '1rem' }}
+            paddingBottom={'2rem'}
+            paddingTop="2.4rem"
+            color="#fff"
+            bgColor="secondary"
+        >
             <Box maxW={styles.mainMaxWidth} p={'1.5rem'} mx={'auto'}>
                 <Flex
                     justify="space-between"
@@ -52,14 +63,15 @@ const Footer: React.FC<Props> = () => {
                     bg={['primary.500', 'primary.500', 'transparent', 'transparent']}
                     direction={{ base: 'column', md: 'row' }}
                 >
-                    <Flex flex="2" justifyContent={{ base: 'center', md: 'left' }} mx="1rem">
+                    <Flex flex="2" justifyContent="left" mx="1rem">
                         <Box alignItems="center">
-                            <Button p="0" variant="ghost">
+                            <Box padding={'2px'} _hover={{ textDecoration: 'underline' }} cursor="pointer">
                                 <Link href="/">
-                                    <Logo color={'primary'} />
+                                    <Logo />
                                 </Link>
-                            </Button>
-                            <Box color="gray.500" fontSize=".85em" mx={'3px'}>
+                            </Box>
+
+                            <Box color="gray.400" fontSize=".85em" mx={'3px'}>
                                 <Text>(916) 728-5682 989</Text>
                                 <Text>Vintage Oak Ave Galt</Text>
                                 <Text>California(CA), 95632</Text>
@@ -75,12 +87,10 @@ const Footer: React.FC<Props> = () => {
                                     height="100%"
                                     margin="10px"
                                     flex="1"
-                                    marginX={'2rem'}
+                                    marginX={{ base: '1.4rem', md: '2rem' }}
                                 >
-                                    <Box textAlign={{ base: 'center', md: 'left' }}>
-                                        <Text fontWeight="bold" color="primary">
-                                            {link.heading}
-                                        </Text>
+                                    <Box textAlign="left">
+                                        <Text fontWeight="bold">{link.heading}</Text>
                                         {link.links.map(({ href, title }) => {
                                             return (
                                                 <Link key={title} href={href}>
@@ -88,7 +98,8 @@ const Footer: React.FC<Props> = () => {
                                                         margin="2px"
                                                         fontSize={'.95rem'}
                                                         cursor="pointer"
-                                                        _hover={{ color: 'default' }}
+                                                        color={'gray.400'}
+                                                        _hover={{ textDecoration: 'underline' }}
                                                     >
                                                         {title}
                                                     </Text>
@@ -103,7 +114,7 @@ const Footer: React.FC<Props> = () => {
                 </Flex>
                 <Divider width={'90%'} mx="auto" marginY={'1.6rem'} />
                 <Flex justifyContent={'space-between'} flexDirection={{ base: 'column', md: 'row' }} marginX=".5rem">
-                    <Text fontSize={'.9rem'} color="gray.500">
+                    <Text fontSize={'.9rem'} color="gray.400">
                         © 2021 Modern News Inc.
                     </Text>
                     <Flex>
@@ -114,7 +125,7 @@ const Footer: React.FC<Props> = () => {
                                         margin=".3rem"
                                         fontSize={'.85rem'}
                                         cursor="pointer"
-                                        _hover={{ color: 'default' }}
+                                        _hover={{ textDecoration: 'underline' }}
                                     >
                                         {title}
                                     </Text>

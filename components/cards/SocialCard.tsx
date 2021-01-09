@@ -49,7 +49,7 @@ const SocialCard = ({ title, onClick, ...props }: Props) => {
             <Text color="primary" fontWeight="bold" marginBottom="1rem">
                 {title}
             </Text>
-            <Box d="flex" justifyContent="space-around" paddingBottom={'.3rem'}>
+            <Box d="flex" flexWrap="wrap" justifyContent="space-around" paddingBottom={'.3rem'}>
                 {socialMedias.map(({ platform, icon }) => {
                     if (!props[platform]) return null;
                     return (

@@ -6,8 +6,9 @@ import { Fonts } from '../fonts';
 
 const theme = extendTheme({
     colors: {
-        primary: '#2C7A7B',
+        primary: '#E31421',
         default: '#494949',
+        secondary: '#08002F',
         youtube: {
             500: '#FF0000',
         },

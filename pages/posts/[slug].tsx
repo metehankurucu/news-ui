@@ -51,7 +51,7 @@ const PostDetail = ({ post, morePosts, errors }: Props) => {
             <Box d="flex" flexDirection={{ base: 'column', md: 'row' }}>
                 <Box as="section" d="flex" flex="3">
                     <Box as="article" margin=".5rem">
-                        <Heading marginY="1.4rem" color="default">
+                        <Heading marginY="1.4rem" color="secondary">
                             {_.upperFirst(post?.title)}
                         </Heading>
                         <Text>

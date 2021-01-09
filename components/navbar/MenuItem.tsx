@@ -1,17 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
-import { Box, Button, Text } from '@chakra-ui/react';
+import { Box, BoxProps, Button, Text } from '@chakra-ui/react';
 
-interface Props {
+interface Props extends BoxProps {
     to: string;
     isLast?: boolean;
 }
 
 const MenuItem: React.FC<Props> = ({ children, isLast = false, to = '/', ...rest }) => {
     return (
-        <Box variant={'ghost'} as={Button}>
+        <Box variant={'ghost'} as={Button} {...rest}>
             <Link href={to}>
-                <Text color="default" display="block" {...rest}>
+                <Text color="secondary" display="block">
                     {children}
                 </Text>
             </Link>

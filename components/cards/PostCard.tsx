@@ -51,7 +51,7 @@ const PostCard = ({
                 />
             </Box>
             <Box mt={{ base: 4, md: 2 }} ml={{ md: 6 }}>
-                <Text fontWeight="bold" textTransform="uppercase" fontSize="sm" letterSpacing="wide" color="teal.600">
+                <Text fontWeight="bold" textTransform="uppercase" fontSize="sm" letterSpacing="wide" color="primary">
                     {post.category}
                 </Text>
                 <Text
@@ -61,7 +61,7 @@ const PostCard = ({
                     lineHeight="normal"
                     fontWeight="semibold"
                     href="#"
-                    color="default"
+                    color="secondary"
                 >
                     {_.upperFirst(post.title)}
                 </Text>
