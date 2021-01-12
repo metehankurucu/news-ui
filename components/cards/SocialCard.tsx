@@ -54,6 +54,7 @@ const SocialCard = ({ title, onClick, ...props }: Props) => {
                     if (!props[platform]) return null;
                     return (
                         <IconButton
+                            key={platform}
                             colorScheme={platform}
                             aria-label={platform}
                             icon={icon}

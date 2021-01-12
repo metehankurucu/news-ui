@@ -59,7 +59,7 @@ const IndexPage = ({ posts }: Props) => {
                         Load More
                     </Button>
                 </Box>
-                <Box flex="2" flexDirection="column" as="section" marginBottom={'10px'} marginX="8px">
+                <Box flex="2" flexDirection="column" as="section" marginBottom={'10px'} marginX="1rem">
                     <Box>
                         <Text color="primary" textAlign="center" marginBottom=".8em" fontWeight="bold">
                             Most Reading Today

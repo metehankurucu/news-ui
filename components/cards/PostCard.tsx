@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Box, BoxProps, Text } from '@chakra-ui/react';
+import { Box, BoxProps, Text, useBreakpointValue } from '@chakra-ui/react';
+import useColorTheme from '../../hooks/useColorTheme';
 import styles from '../../constants/styles';
 import { Post } from '../../interfaces';
 import Image from '../Image';
 import Card from './Card';
 import _ from 'lodash';
-import useColorTheme from '../../hooks/useColorTheme';
 interface Props extends BoxProps {
     post: Post;
     column?: boolean;
@@ -14,6 +14,8 @@ interface Props extends BoxProps {
     imgBoxSize?: string | number;
     titleFontSize?: number | string;
 }
+
+type FlexDirection = 'row' | 'column' | undefined;
 
 const PostCard = ({
     post,
@@ -25,13 +27,11 @@ const PostCard = ({
 }: Props) => {
     const [hover, setHover] = useState(false);
     const colors = useColorTheme();
-
+    const flexDirection: FlexDirection = useBreakpointValue({ base: 'column', md: column ? 'column' : 'row' });
     return (
         <Card
             p={4}
-            display={{ md: 'flex' }}
             justifyContent="flex-start"
-            flexDirection={{ base: 'column', md: column ? 'column' : 'row' }}
             cursor="pointer"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
@@ -39,7 +39,9 @@ const PostCard = ({
             transition="ease-in 0.2s"
             overflow="hidden"
             marginY=".5rem"
+            display="flex"
             {...props}
+            flexDirection={flexDirection}
         >
             <Box>
                 <Image

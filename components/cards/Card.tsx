@@ -15,7 +15,7 @@ const Card = ({ children, ...props }: Props) => {
             borderWidth="0.1px"
             borderRadius={styles.borderRadius}
             {...props}
-            bgColor={colors.background}
+            backgroundColor={colors.background}
             borderColor={colors.border}
         >
             {children}
