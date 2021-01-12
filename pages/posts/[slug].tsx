@@ -68,8 +68,8 @@ const PostDetail = ({ post, morePosts, errors }: Props) => {
                                 'https://images.unsplash.com/photo-1554384645-13eab165c24b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1275&q=80',
                         }}
                     />
-                    <SocialCard title="Share The Post" facebook twitter linkedin onClick={(platform) => {}} />
-                    <NewsletterForm onSubmitForm={(email) => {}} marginY="10px" />
+                    <SocialCard title="Share The Post" facebook twitter linkedin onClick={() => {}} />
+                    <NewsletterForm onSubmitForm={() => {}} marginY="10px" />
                 </Box>
             </Box>
             <Box as="section">
