@@ -2,15 +2,15 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import Layout from '../../components/Layout';
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { posts } from '../../utils/sample-data';
-import { Post } from '../../interfaces';
 import styles from '../../constants/styles';
 import Image from '../../components/Image';
 import NewsletterForm from '../../components/NewsletterForm';
 import AuthorCard from '../../components/cards/AuthorCard';
 import PostCard from '../../components/cards/PostCard';
 import SocialCard from '../../components/cards/SocialCard';
-import { useRouter } from 'next/router';
 import useColorTheme from '../../hooks/useColorTheme';
+import { Post } from '../../interfaces';
+import { useRouter } from 'next/router';
 import _ from 'lodash';
 
 type Props = {
@@ -56,28 +56,20 @@ const PostDetail = ({ post, morePosts, errors }: Props) => {
                         <Heading marginY="1.4rem" color={colors.secondary}>
                             {_.upperFirst(post?.title)}
                         </Heading>
-                        <Text>
-                            {post?.content} {post?.content} {post?.content} {post?.content} {post?.content}{' '}
-                            {post?.content} {post?.content} {post?.content} {post?.content} {post?.content}{' '}
-                            {post?.content} {post?.content}
-                        </Text>
+                        <Text>{post?.content}</Text>
                     </Box>
                 </Box>
                 <Box as="section" flex="1" flexDirection="column" marginTop={'2rem'}>
                     <AuthorCard
-                        avatarName={'Metehan Kurucu'}
-                        avatarSrc={
-                            'https://images.unsplash.com/photo-1554384645-13eab165c24b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1275&q=80'
-                        }
+                        author={{
+                            id: '1',
+                            name: 'Metehan Kurucu',
+                            avatar:
+                                'https://images.unsplash.com/photo-1554384645-13eab165c24b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1275&q=80',
+                        }}
                     />
-                    <SocialCard
-                        title="Share The Post"
-                        facebook
-                        twitter
-                        linkedin
-                        onClick={(platform) => console.log(platform)}
-                    />
-                    <NewsletterForm onSubmitForm={(email) => console.log(email)} marginY="10px" />
+                    <SocialCard title="Share The Post" facebook twitter linkedin onClick={(platform) => {}} />
+                    <NewsletterForm onSubmitForm={(email) => {}} marginY="10px" />
                 </Box>
             </Box>
             <Box as="section">

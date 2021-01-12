@@ -12,6 +12,7 @@ import SocialCard from '../components/cards/SocialCard';
 import useColorTheme from '../hooks/useColorTheme';
 
 const latestPostsLength = 10;
+
 type Props = {
     posts?: Post[];
     errors?: string;
@@ -76,7 +77,7 @@ const IndexPage = ({ posts }: Props) => {
                             );
                         })}
                     </Box>
-                    <NewsletterForm onSubmitForm={(email) => console.log(email)} marginY="10px" />
+                    <NewsletterForm onSubmitForm={(email) => {}} marginY="10px" />
                     <SocialCard
                         title="Follow Us"
                         facebook
@@ -84,7 +85,7 @@ const IndexPage = ({ posts }: Props) => {
                         linkedin
                         youtube
                         instagram
-                        onClick={(platform) => console.log(platform)}
+                        onClick={(platform) => {}}
                     />
                 </Box>
             </Box>

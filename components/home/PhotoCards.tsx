@@ -33,13 +33,7 @@ const PhotoCards: React.FC<Props> = ({
     }, [isLargerThanMd]);
 
     return (
-        <Box
-            flex={1}
-            d="flex"
-            maxHeight={`${maxContainerHeight}px`}
-            flexDirection={{ base: 'column', md: 'row' }}
-            // overflow="hidden"
-        >
+        <Box flex={1} d="flex" maxHeight={`${maxContainerHeight}px`} flexDirection={{ base: 'column', md: 'row' }}>
             <PhotoCard
                 title={post1.title}
                 imgSrc={post1.img}

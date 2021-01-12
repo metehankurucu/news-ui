@@ -9,7 +9,7 @@ type Props = {
     title?: string;
 } & BoxProps;
 
-const Layout: React.FC<Props> = ({ children, title = 'This is the default title', ...props }) => (
+const Layout: React.FC<Props> = ({ children, title = 'Modern News', ...props }) => (
     <Box>
         <Head>
             <title>{title}</title>

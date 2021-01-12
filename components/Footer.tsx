@@ -4,41 +4,7 @@ import Link from 'next/link';
 import styles from '../constants/styles';
 import Logo from './Logo';
 import useColorTheme from '../hooks/useColorTheme';
-
-const links = [
-    {
-        heading: 'Discover',
-        links: [
-            { href: '/', title: 'Home' },
-            { href: '/', title: 'Magazine' },
-            { href: '/', title: 'Sports' },
-            { href: '/', title: 'Economy' },
-        ],
-    },
-    {
-        heading: 'Company',
-        links: [
-            { href: '/', title: 'About' },
-            { href: '/', title: 'Services' },
-            { href: '/', title: 'Blog' },
-            { href: '/', title: 'Career' },
-        ],
-    },
-    {
-        heading: 'Social',
-        links: [
-            { href: '/', title: 'LinkedIn' },
-            { href: '/', title: 'Facebook' },
-            { href: '/', title: 'Twitter' },
-            { href: '/', title: 'Instagram' },
-        ],
-    },
-];
-
-const bottomLinks = [
-    { href: '/', title: 'Terms Of Use' },
-    { href: '/', title: 'Privacy Policy' },
-];
+import { FOOTER_LINKS, FOOTER_BOTTOM_LINKS } from '../constants';
 
 interface Props {}
 
@@ -82,7 +48,7 @@ const Footer: React.FC<Props> = () => {
                         </Box>
                     </Flex>
                     <Flex flex="3" direction={{ base: 'column', md: 'row' }}>
-                        {links.map((link) => {
+                        {FOOTER_LINKS.map((link) => {
                             return (
                                 <Box
                                     key={link.heading}
@@ -121,7 +87,7 @@ const Footer: React.FC<Props> = () => {
                         © 2021 Modern News Inc.
                     </Text>
                     <Flex>
-                        {bottomLinks.map(({ href, title }) => {
+                        {FOOTER_BOTTOM_LINKS.map(({ href, title }) => {
                             return (
                                 <Link key={title} href={href}>
                                     <Text

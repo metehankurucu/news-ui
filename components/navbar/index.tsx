@@ -8,25 +8,7 @@ import styles from '../../constants/styles';
 import DrawerMenu from './DrawerMenu';
 import ThemeToggler from '../ThemeToggler';
 import useColorTheme from '../../hooks/useColorTheme';
-
-const NAVBAR_LINKS = [
-    {
-        to: '/',
-        name: 'Home',
-    },
-    {
-        to: '/',
-        name: 'Magazine',
-    },
-    {
-        to: '/',
-        name: 'Sports',
-    },
-    {
-        to: '/',
-        name: 'Economy',
-    },
-];
+import { NAVBAR_LINKS } from '../../constants';
 
 interface Props {}
 
@@ -81,7 +63,7 @@ const Navbar: React.FC<Props> = () => {
                             </MenuItem>
                         );
                     })}
-                    <ThemeToggler w="100%" d={{ base: 'flex', md: 'none' }} />
+                    <ThemeToggler onClick={() => setIsOpen(false)} w="100%" d={{ base: 'flex', md: 'none' }} />
                 </DrawerMenu>
             </Flex>
         </Box>
